@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  
+      <ion-title> 
+          {{ 'GROUPS' | translate}}
+      </ion-title>
+  
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="screen_back">
+{{categoryName}}
+<ion-card *ngFor="let myItem of meetUpList" >
+    <img src="{{myItem.group_pic}}"/>
+  <ion-card-header>
+    {{myItem.name}}<br>
+    Organiser: {{myItem.org}}<br>
+    Join Mode: {{myItem.join_mode}}<br>
+  </ion-card-header>
+  <ion-card-content>
+  </ion-card-content>
+</ion-card>  
+</ion-content>

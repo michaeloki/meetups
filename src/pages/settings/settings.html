@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  
+      <ion-title> 
+          {{ 'SETTINGS' | translate }}
+      </ion-title>
+  
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="pageScreen">
+  <div padding class="fade">
+        
+    <ion-list>
+      <ion-item *ngFor="let myItem of categoryList" (click)="setCategory($event,myItem)">
+          <ion-icon name="star"></ion-icon>  {{myItem.name}}
+    </ion-item>
+    </ion-list>
+  
+    </div>  
+</ion-content>

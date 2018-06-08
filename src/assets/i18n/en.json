@@ -1,0 +1,14 @@
+{
+  "HOMEPAGE_TITLE":"Menu",
+  "INBOX":"Inbox",
+  "ABOUT":"About",
+  "PROFILE":"Profile",
+  "SETTINGS":"Settings",
+  "OFFLINE":"You are offline",
+  "SAVED_MESSAGE":"Your category has been saved",
+  "EMPTY_MESSAGE":"No response from meetup",
+  "CHOOSE_CATEGORY":"Please choose a category",
+  "GETTING_CATEGORIES":"Retrieving  categories",
+  "GETTING_MEETUPS":"Retrieving meetups",
+  "GROUPS": "Groups"
+}

@@ -1,1 +1,49 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<!--<ion-nav [root]="rootPage"></ion-nav>-->
+<ion-menu [content]="mycontent" persistent="true">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>{{'MENU' | translate}} 
+            </ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content class="sideMenuBack" menuClose>
+      
+      <ion-card (click)="changePic()"><!--
+            <ion-item *ngIf ="showPhoto">
+                <ion-avatar item-start>
+                  <img src="{{userPhoto}}">
+                </ion-avatar>
+                <h2>{{first_Name}}</h2>
+              </ion-item>
+              <ion-item *ngIf ="hidePhoto">
+                  <ion-avatar item-start>
+                      <ion-icon name="contact" color="primary" isActive="true"></ion-icon>
+                  </ion-avatar>
+                  <h2>{{first_Name}}</h2>
+                </ion-item>-->
+        </ion-card>
+
+      <ion-list class="sideMenuTop">
+            <ion-item>
+              <button menuClose ion-item (click)="openHome()">
+                <ion-icon name="home" color="forest" isActive="true"></ion-icon> {{'HOMEPAGE_TITLE'|translate}}
+              </button>
+              <button menuClose ion-item (click)="openPage('GroupsPage')">
+                <ion-icon name="star" color="primary" isActive="true"></ion-icon> {{'GROUPS'|translate}}
+              </button>
+              <button menuClose ion-item (click)="openPage('SettingsPage')">
+                    <ion-icon name="settings" color="orangei" isActive="true"></ion-icon> {{'SETTINGS'|translate}}
+                  </button>
+                  <button menuClose ion-item (click)="openPage('AboutPage')">
+                    <ion-icon name="information-circle" color="dark" isActive="true"></ion-icon> {{'ABOUT'|translate}}
+                  </button>
+            </ion-item>
+
+          </ion-list>
+    </ion-content>
+  
+  </ion-menu>
+  <ion-nav [root]="rootPage" #mycontent swipeBackEnabled="false"></ion-nav>
+
+
