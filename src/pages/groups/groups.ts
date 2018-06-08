@@ -19,7 +19,7 @@ export class GroupsPage {
     private service: ServiceComponent,translate: TranslateService,private messageService: MessageserviceProvider) {
       this.showMyMeetups();
       
-  this.categoryName = this.service.categoryName;
+  this.categoryName = localStorage.getItem('categoryName');
   }
 
   ionViewDidLoad() {

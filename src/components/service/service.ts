@@ -28,7 +28,7 @@ export class ServiceComponent {
   numOfEvents:any;
   public  Categories = [];
   public Meetups = [];
-  public categoryName:string;
+  
 
   constructor(private network: Network,public loadingCtrl: LoadingController,private messageService: MessageserviceProvider,
     private toastCtrl: ToastController,public http: Http,translate: TranslateService) {
